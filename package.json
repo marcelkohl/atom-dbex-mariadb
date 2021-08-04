@@ -1,14 +1,16 @@
 {
   "main": "./lib/main",
-  "name": "dbex-engine-base",
+  "name": "atom-dbex-mariadb",
   "version": "1.0.0",
-  "description": "dbex engine base - Base engine structure",
+  "description": "Dbex MariaDB engine",
   "keywords": [
     "dbex",
     "engine",
-    "database"
+    "database",
+    "MariaDB",
+    "sql"
   ],
-  "repository": "https://github.com/marcelkohl/dbex-engine-base",
+  "repository": "https://github.com/marcelkohl/atom-dbex-mariadb",
   "license": "GPLv3",
   "engines": {
     "atom": ">=1.45.0 <2.0.0"
@@ -19,5 +21,9 @@
         "1.0.0": "subscribePlugin"
       }
     }
+  },
+  "dependencies": {
+    "mariadb": "^2.5.4",
+    "sql-prettier": "^0.1.12"
   }
 }
