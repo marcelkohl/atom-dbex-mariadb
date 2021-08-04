@@ -1,0 +1,47 @@
+@fa-font-path: "atom://dbex-engine-base/iconsets";
+
+@font-face {
+    font-family: 'sample-engine-font';
+    // Font icons can be generated at https://www.glyphter.com/
+    src: url('@{fa-font-path}/sample-engine-font.woff') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@sample-struct: '\f121';
+@custom-sample: '\0041';
+@custom-sample-color: #7fc89a;
+
+.custom-icon(@name) {
+  font-family: 'sample-engine-font';
+  content: @@name;
+}
+
+.custom-icon-colored(@name) {
+  .custom-icon(@name);
+  @color: "@{name}-color";
+  color: @@color;
+}
+
+.dbex-icon-fontawesome(@name) {
+  font-family: 'FontAwesome';
+  content: @@name;
+}
+
+.dbex {
+  .sample-engine-icon::before {
+    .custom-icon-colored(custom-sample);
+  }
+
+  .icon-struct::before {
+    .dbex-icon-fontawesome(sample-struct);
+  }
+
+  .sample-table-counter-detail > .tree-view-root .details {
+    background-color: #8e8e8ead;
+    padding: 0px 5px;
+    border-radius: 6px;
+    color: black;
+  }
+}

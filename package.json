@@ -1,0 +1,23 @@
+{
+  "main": "./lib/main",
+  "name": "dbex-engine-base",
+  "version": "1.0.0",
+  "description": "dbex engine base - Base engine structure",
+  "keywords": [
+    "dbex",
+    "engine",
+    "database"
+  ],
+  "repository": "https://github.com/marcelkohl/dbex-engine-base",
+  "license": "GPLv3",
+  "engines": {
+    "atom": ">=1.45.0 <2.0.0"
+  },
+  "providedServices": {
+    "dbex": {
+      "versions": {
+        "1.0.0": "subscribePlugin"
+      }
+    }
+  }
+}
